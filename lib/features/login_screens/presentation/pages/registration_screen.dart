@@ -11,6 +11,7 @@ class RegistrationScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color(0xFFFAFBFD),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(height: 150.0),
             Container(

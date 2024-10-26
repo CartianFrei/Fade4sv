@@ -13,9 +13,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
   final TextEditingController controller = TextEditingController();
   final FocusNode focusNode = FocusNode();
 
-  void rebuild() {
-    setState(() {});
-  }
+  void rebuild() => setState(() {});
 
   @override
   void initState() {
@@ -39,5 +37,11 @@ class _PhoneScreenState extends State<PhoneScreen> {
             ButtonWidget(function: () {}, text: 'Далее'),
           ],
         ));
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    focusNode.removeListener(rebuild);
   }
 }
